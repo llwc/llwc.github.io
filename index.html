@@ -84,7 +84,6 @@
 							<div class="gallery style2 medium lightbox onscroll-fade-in">
 								<article>
 									<a href="presentations/DeepSeek_related_tech_points.pdf" class="pdf">
-										<img src="images/gallery/thumbs/01.jpg" alt="" />
 									</a>
 									<div class="caption">
 										<h3>DeepSeek introduction</h3>
@@ -96,7 +95,6 @@
 								</article>
 								<article>
 									<a href="images/gallery/fulls/02.jpg" class="image">
-										<img src="images/gallery/thumbs/02.jpg" alt="" />
 									</a>
 									<div class="caption">
 										<h3>Testing Information</h3>
@@ -140,23 +138,24 @@
 					<section class="wrapper style1 align-center">
 						<div class="inner medium">
 							<h2>Get in touch</h2>
-							<form method="post" action="#">
+							<form method="POST" action="https://formsubmit.co/lilinermiao@gmail.com">
+								<input type="hidden" name="_captcha" value="false">
 								<div class="fields">
 									<div class="field half">
 										<label for="name">Name</label>
-										<input type="text" name="name" id="name" value="" />
+										<input type="text" name="name" id="name" value="" required />
 									</div>
 									<div class="field half">
 										<label for="email">Email</label>
-										<input type="email" name="email" id="email" value="" />
+										<input type="email" name="email" id="email" value="" required />
 									</div>
 									<div class="field">
 										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="6"></textarea>
+										<textarea name="message" id="message" rows="6" required></textarea>
 									</div>
 								</div>
 								<ul class="actions special">
-									<li><input type="submit" name="submit" id="submit" value="Send Message" /></li>
+									<li><input type="submit" value="Send Message" /></li>
 								</ul>
 							</form>
 
