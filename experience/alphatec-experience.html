@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alphatec Spine Experience - Medical Imaging & Surgical Navigation</title>
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- MathJax for mathematical notation -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f8f9fa;
+    }
+
+    header {
+      background: linear-gradient(135deg, rgba(41, 128, 185, 0.95), rgba(52, 152, 219, 0.95)), 
+                  url('images/alphatec_logo.png');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(26, 188, 156, 0.1), rgba(52, 152, 219, 0.1));
+    }
+
+    .header-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      max-width: 900px;
+      padding: 0 2rem;
+    }
+
+    .header-content h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.5px;
+    }
+
+    .header-content p {
+      font-size: 1.3rem;
+      font-weight: 300;
+      opacity: 0.95;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 3rem;
+      color: #1a202c;
+      position: relative;
+      padding-bottom: 1rem;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, #2980b9, #1abc9c);
+      border-radius: 2px;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .project-card {
+      background: white;
+      border-radius: 12px;
+      padding: 2.5rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+      transition: all 0.3s ease;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .icon-wrapper {
+      width: 70px;
+      height: 70px;
+      background: linear-gradient(135deg, #2980b9, #1abc9c);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .project-card:hover .icon-wrapper {
+      transform: scale(1.1) rotate(5deg);
+    }
+
+    .icon-wrapper i {
+      font-size: 2rem;
+      color: white;
+    }
+
+    .project-card h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1.25rem;
+      color: #1a202c;
+      line-height: 1.3;
+    }
+
+    .project-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .project-card li {
+      padding-left: 1.75rem;
+      margin-bottom: 1rem;
+      position: relative;
+      color: #4a5568;
+      line-height: 1.7;
+    }
+
+    .project-card li::before {
+      content: '▹';
+      position: absolute;
+      left: 0;
+      color: #2980b9;
+      font-weight: bold;
+      font-size: 1.3rem;
+    }
+
+    .project-card li:last-child {
+      margin-bottom: 0;
+    }
+
+    .highlight {
+      font-weight: 600;
+      color: #1a202c;
+    }
+
+    .metric {
+      font-weight: 700;
+      color: #2980b9;
+    }
+
+    footer {
+      background: #1a202c;
+      color: #cbd5e0;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 4rem;
+    }
+
+    footer p {
+      font-size: 0.95rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .header-content h1 {
+        font-size: 2rem;
+      }
+
+      .header-content p {
+        font-size: 1.1rem;
+      }
+
+      header {
+        height: 300px;
+      }
+
+      .section-title {
+        font-size: 2rem;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .container {
+        padding: 2rem 1rem;
+      }
+
+      .project-card {
+        padding: 2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .header-content h1 {
+        font-size: 1.75rem;
+      }
+
+      .header-content p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-content">
+      <h1>Alphatec Spine Experience</h1>
+      <p>Medical Imaging • Surgical Navigation • FDA Regulatory</p>
+    </div>
+  </header>
+
+  <div class="container">
+    <h2 class="section-title">Key Projects & Achievements</h2>
+    
+    <div class="projects-grid">
+      
+      <!-- Project 1 -->
+      <div class="project-card">
+        <div class="icon-wrapper">
+          <i class="fas fa-microscope"></i>
+        </div>
+        <h3>C-arm Calibration & System Optimization</h3>
+        <ul>
+          <li>Led a data-driven initiative to improve system performance and operational efficiency by redesigning the C-arm calibration process</li>
+          <li>Collaborated with cross-functional teams—including marketing, hardware, systems, and engineering—to define requirements and deliver a scalable calibration tool implemented in <span class="highlight">Python</span></li>
+          <li>Reduced installation time from over <span class="metric">8 hours</span> to under <span class="metric">2 hours</span> and increased system performance pass rate from under <span class="metric">20%</span> to over <span class="metric">80%</span>, directly improving product efficiency and customer satisfaction</li>
+        </ul>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card">
+        <div class="icon-wrapper">
+          <i class="fas fa-x-ray"></i>
+        </div>
+        <h3>Intra-Operative Image Alignment (IOA)</h3>
+        <ul>
+          <li>Developed a data pipeline to align intra-operative surgical images with high precision (\(\leq 5\) mm, \(\leq 3°\)), enhancing clinical decision-making during procedures</li>
+          <li>Partnered with cross-functional teams—including regulatory, product, and engineering—to drive the FDA 510(k) submission and successfully launch the IOA system's alpha release</li>
+          <li>Designed and deployed a statistical monitoring tool to evaluate system performance in the field within <span class="metric">20 minutes</span>, enabling scalable and consistent QA across hospital sites</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Alphatec Spine Experience Portfolio. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

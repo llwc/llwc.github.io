@@ -1,217 +1,748 @@
-<!DOCTYPE HTML>
-<!--
-	Story by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Lin Li Homepage</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lin Li - Data Scientist & Machine Learning Engineer</title>
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="divided">
+    :root {
+      --primary-color: #2563eb;
+      --secondary-color: #1e40af;
+      --accent-color: #3b82f6;
+      --text-dark: #1a202c;
+      --text-light: #4a5568;
+      --bg-light: #f8fafc;
+      --bg-white: #ffffff;
+    }
 
-				<!-- One -->
-					<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
-						<div class="content">
-							<h1>Lin Li</h1>
-							<p class="major">I am a Data Scientist with a Ph.D. in Applied Mathematics and a deep expertise in applied statistics, computer vision, and deep learning. I’m passionate about building scalable machine learning systems that solve complex real-world problems. My work spans from algorithm design to deployment, with a strong interest in medical imaging, 3D reconstruction, and high-performance data pipelines. I enjoy translating theoretical insights into practical solutions that drive measurable impact.</p>
-							<ul class="actions stacked">
-								<li><a href="https://www.linkedin.com/in/lin-li-610904114/" class="button big wide smooth-scroll-middle">My LinkedIn</a></li>
-								<li><a href="https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=fOwSWgkAAAAJ" class="button big wide smooth-scroll-middle">My Google Scholar</a></li>
-							</ul>
-						</div>
-						<div class="image">
-							<img src="images/Lin.jpg" alt="" />
-						</div>
-					</section>
+    html {
+      scroll-behavior: smooth;
+    }
 
-				<!-- Two -->
-					<section class="spotlight style1 orient-right content-align-left image-position-right onscroll-image-fade-in" id="Alphatec Spine">
-						<div class="content">
-							<h2> <a href="https://atecspine.com/"> Alphatec Spine Experience </a></h2>
-							<p>I lead the redesign of the C-arm calibration process, reducing installation time by over 75% and increasing system pass rates by more than 60%. I also spearheaded the development of an intra-operative image alignment (IOA) system, playing a key role in its FDA 510(k) submission and alpha launch. My contributions have enabled faster, more reliable surgical workflows and improved clinical outcomes.</p>
-							<ul class="actions stacked">
-								<li><a href="experience/atec.html" class="button">Learn More</a></li>
-							</ul>
-						</div>
-						<div class="image">
-							<img src="images/alphatec_logo.png" alt="" />
-						</div>
-					</section>
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      line-height: 1.7;
+      color: var(--text-dark);
+      background-color: var(--bg-light);
+    }
 
-				<!-- Three -->
-					<section class="spotlight style1 orient-left content-align-left image-position-left onscroll-image-fade-in">
-						<div class="content">
-							<h2>Tusimple Experience</h2>
-							<p>I built and deployed deep learning models for 3D perception in autonomous vehicles. I developed large-scale data pipelines, monocular and stereo 3D estimation models, and real-time APIs, significantly improving depth estimation accuracy and automation in challenging environments.</p>
-							<ul class="actions stacked">
-								<li><a href="experience/tusimple.html" class="button">Learn More</a></li>
-							</ul>
-						</div>
-						<div class="image">
-							<img src="images/Navistar-TuSimple.jpg" alt="" />
-						</div>
-					</section>
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      z-index: 1000;
+      padding: 1rem 0;
+    }
 
-				<!-- Four -->
-					<!-- <section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
-						<div class="content">
-							<h2>Internship in Facebook</h2>
-							<p>I built a multi-modal model that doubled the detection of misinformation compared to production models, and contributed new features that increased engagement model recall by 10% without compromising precision.</p>
-							<ul class="actions stacked">
-								<li><a href="#" class="button">Learn More</a></li>
-							</ul>
-						</div>
-						<div class="image">
-							<img src="images/Lin.jpg" alt="" />
-						</div>
-					</section> -->
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-				<!-- Five -->
-					<!-- <section class="wrapper style1 align-center">
-						<div class="inner">
-							<h2>My Blogs</h2>
-							<p>I includes all my presentations here.</p>
-						</div>
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      text-decoration: none;
+    }
 
-						<div class="wrapper style1 medium">
-							<article>
-								<a href="presentations/DeepSeek_related_tech_points.pdf" class="pdf">
-									<div class="caption">
-										<h3>DeepSeek Introduction</h3>
-										<p>This presentation covers technique points in DeepSeek R1.</p>
-										<ul class="actions fixed">
-											<li><span class="button small">View Article</span></li>
-										</ul>
-									</div>
-								</a>
-							</article>
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
 
-							<article>
-								<a href="presentations/testing_info.pdf" class="pdf">
-									<div class="caption">
-										<h3>Testing Information</h3>
-										<p>Template part.</p>
-										<ul class="actions fixed">
-											<li><span class="button small">View PDF</span></li>
-										</ul>
-									</div>
-								</a>
-							</article>
-					</div>
+    .nav-links a {
+      color: var(--text-dark);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
 
-					</section> -->
+    .nav-links a:hover {
+      color: var(--primary-color);
+    }
 
-				<!-- Six -->
-					<section class="wrapper style1 align-center">
-						<div class="inner">
-							<h2>Previous presentation</h2>
-							<div class="items style1 medium onscroll-fade-in">
-								<article>
-									<span class="icon solid style2 major fa-flag"></span>
-									<h3><a href="presentations/DeepSeek_related_tech_points.pdf" class="pdf">DeepSeek Introduction </a></h3>
-									<p>This presentation covers technique points in DeepSeek R1.</p>
-								</article>
-								<article>
-									<span class="icon solid style2 major fa-flag"></span>
-									<h3> <a href="presentations/EPro_PnP_Reading.pdf" class="pdf"> EPro-PnP </a> </h3>
-									<ul style="text-align: left;">
-										<li> proposed a probabilistic PnP layer for general end-to-end pose estimation via learnable 2D-3D correspondences</li>
-										<li> EPro-PnP can easily reach toptier performance for 6DoF pose estimation by simply inserting it into the CDPN framework.</li>
-									</ul>
-								</article>
-								
-							</div>
-						</div>
-					</section>
+    /* Hero Section */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding-top: 80px;
+      position: relative;
+      overflow: hidden;
+    }
 
-				<section class="wrapper style1 align-center">
-				<div class="inner">
-					<h2><a href="https://scholar.google.com/citations?user=fOwSWgkAAAAJ&hl=en">Publications</h2>
-					<ul style="text-align: left;">
-					<li><a href="https://www.proquest.com/openview/8d91d4707009a8fe382debf64dd8dd1e/1?pq-origsite=gscholar&cbl=18750&diss=y">Li, L., et al. "Improved Quasi-Monte Carlo Methods for Integrating High Dimension Functions", 2020.</a></li>
-					<li><a href="https://link.springer.com/article/10.1007/s11075-025-02223-5">Li, L., Hyman, J.M. Using radial basis functions for control variate integration of high-dimensional functions defined by sparse sample data. Numer Algor (2025).</li>
-					</ul>
-				</div>
-				</section>
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" fill="none"/><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.1)"/></svg>');
+      opacity: 0.3;
+    }
 
+    .hero-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
 
-				<section class="wrapper style1 align-left">
-					<div class="inner">
-						<h2>Education</h2>
-						<ul>
-						<li>
-							<strong>Ph.D. in Applied Mathematics</strong><br />
-							<a href="https://tulane.edu/">Tulane University</a>, New Orleans, LA<br />
-							Advisor: <a href="https://sse.tulane.edu/mac-hyman-phd" target="_blank">Dr. Mac Hyman</a> <br />
-							2015 – 2020
-						</li>
-						<li>
-							<strong>B.Sc. in Applied Mathematics</strong><br />
-							<a href="https://en.xjtu.edu.cn/">Xi'an Jiaotong University </a>, Xi'an, China<br />
-							2011 – 2015
-						</li>
-						</ul>
-					</div>
-					</section>
-				<!-- Seven -->
-					<!-- <section class="wrapper style1 align-center">
-						<div class="inner medium">
-							<h2>Get in touch</h2>
-							<form method="POST" action="https://formsubmit.co/lilinermiao@gmail.com">
-								<input type="hidden" name="_captcha" value="false">
-								<div class="fields">
-									<div class="field half">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" value="" required />
-									</div>
-									<div class="field half">
-										<label for="email">Email</label>
-										<input type="email" name="email" id="email" value="" required />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="6" required></textarea>
-									</div>
-								</div>
-								<ul class="actions special">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</form>
+    .hero-content h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
 
-						</div>
-					</section> -->
+    .hero-content .tagline {
+      font-size: 1.4rem;
+      font-weight: 300;
+      margin-bottom: 2rem;
+      opacity: 0.95;
+    }
 
-				<!-- Footer -->
-					<footer class="wrapper style1 align-center">
-						<div class="inner">
-							<ul class="icons">
-								<li><a href="https://github.com/llwc" class="icon brands style2 fa-github"><span class="label">Github</span></a></li>
-								<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
-								<li><a href="https://www.linkedin.com/in/lin-li-610904114/" class="icon brands style2 fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-								<li><a href="#" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
-							</ul>
-							<p>&copy;Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-						</div>
-					</footer>
+    .hero-content p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 2.5rem;
+      opacity: 0.9;
+    }
 
-			</div>
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+    .btn {
+      padding: 0.875rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
 
-	</body>
+    .btn-primary {
+      background: white;
+      color: var(--primary-color);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      border: 2px solid white;
+    }
+
+    .btn-secondary:hover {
+      background: white;
+      color: var(--primary-color);
+    }
+
+    .hero-image {
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-image img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      border: 5px solid rgba(255, 255, 255, 0.2);
+    }
+
+    /* Section Styles */
+    section {
+      padding: 5rem 2rem;
+    }
+
+    .section-light {
+      background: var(--bg-white);
+    }
+
+    .section-dark {
+      background: var(--bg-light);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--text-dark);
+    }
+
+    .section-subtitle {
+      text-align: center;
+      font-size: 1.2rem;
+      color: var(--text-light);
+      margin-bottom: 4rem;
+    }
+
+    /* Experience Cards */
+    .experience-grid {
+      display: grid;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .experience-card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+    }
+
+    .experience-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .experience-card.reverse {
+      direction: rtl;
+    }
+
+    .experience-card.reverse > * {
+      direction: ltr;
+    }
+
+    .experience-content {
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .experience-content h3 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--text-dark);
+    }
+
+    .experience-content h3 a {
+      color: var(--text-dark);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .experience-content h3 a:hover {
+      color: var(--primary-color);
+    }
+
+    .experience-content p {
+      color: var(--text-light);
+      margin-bottom: 1.5rem;
+      line-height: 1.8;
+    }
+
+    .experience-image {
+      background-size: cover;
+      background-position: center;
+      min-height: 300px;
+    }
+
+    .experience-image.logo {
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-color: #f8fafc;
+    }
+
+    /* Publications Section */
+    .publications-list {
+      background: white;
+      padding: 3rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .publications-list ul {
+      list-style: none;
+    }
+
+    .publications-list li {
+      padding: 1.5rem 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .publications-list li:last-child {
+      border-bottom: none;
+    }
+
+    .publications-list a {
+      color: var(--primary-color);
+      text-decoration: none;
+      line-height: 1.8;
+      transition: color 0.3s ease;
+    }
+
+    .publications-list a:hover {
+      color: var(--secondary-color);
+      text-decoration: underline;
+    }
+
+    /* Presentations Grid */
+    .presentations-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .presentation-card {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+    }
+
+    .presentation-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .presentation-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .presentation-icon i {
+      font-size: 1.75rem;
+      color: white;
+    }
+
+    .presentation-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: var(--text-dark);
+    }
+
+    .presentation-card h3 a {
+      color: var(--text-dark);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .presentation-card h3 a:hover {
+      color: var(--primary-color);
+    }
+
+    .presentation-card p,
+    .presentation-card ul {
+      color: var(--text-light);
+      line-height: 1.7;
+    }
+
+    .presentation-card ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .presentation-card li {
+      padding-left: 1.5rem;
+      position: relative;
+      margin-bottom: 0.5rem;
+    }
+
+    .presentation-card li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--primary-color);
+      font-weight: bold;
+    }
+
+    /* Education Section */
+    .education-timeline {
+      background: white;
+      padding: 3rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .education-item {
+      padding: 2rem 0;
+      border-left: 3px solid var(--primary-color);
+      padding-left: 2rem;
+      margin-left: 1rem;
+      position: relative;
+    }
+
+    .education-item::before {
+      content: '';
+      position: absolute;
+      left: -9px;
+      top: 2rem;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: var(--primary-color);
+      border: 3px solid white;
+      box-shadow: 0 0 0 3px var(--bg-light);
+    }
+
+    .education-item:last-child {
+      border-left-color: transparent;
+    }
+
+    .education-item strong {
+      font-size: 1.3rem;
+      color: var(--text-dark);
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .education-item a {
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+
+    .education-item a:hover {
+      text-decoration: underline;
+    }
+
+    .education-date {
+      color: var(--text-light);
+      font-style: italic;
+      margin-top: 0.5rem;
+      display: block;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--text-dark);
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+      list-style: none;
+    }
+
+    .social-links a {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .social-links a:hover {
+      background: var(--primary-color);
+      transform: translateY(-3px);
+    }
+
+    .social-links i {
+      font-size: 1.25rem;
+    }
+
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--text-dark);
+      cursor: pointer;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 968px) {
+      .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero-content h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .experience-card,
+      .experience-card.reverse {
+        grid-template-columns: 1fr;
+        direction: ltr;
+      }
+
+      .experience-image {
+        order: -1;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero-content h1 {
+        font-size: 2rem;
+      }
+
+      .hero-content .tagline {
+        font-size: 1.1rem;
+      }
+
+      .section-title {
+        font-size: 2rem;
+      }
+
+      .presentations-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <a href="#" class="logo">Lin Li</a>
+      <button class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#presentations">Presentations</a></li>
+        <li><a href="#education">Education</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <h1>Lin Li, Ph.D.</h1>
+        <p class="tagline">Data Scientist & Machine Learning Engineer</p>
+        <p>I am a Data Scientist with a Ph.D. in Applied Mathematics and deep expertise in applied statistics, computer vision, and deep learning. I'm passionate about building scalable machine learning systems that solve complex real-world problems. My work spans from algorithm design to deployment, with a strong interest in medical imaging, 3D reconstruction, and high-performance data pipelines.</p>
+        <div class="hero-buttons">
+          <a href="https://www.linkedin.com/in/lin-li-610904114/" class="btn btn-primary">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=fOwSWgkAAAAJ" class="btn btn-secondary">
+            <i class="fas fa-graduation-cap"></i> Google Scholar
+          </a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="images/Lin.jpg" alt="Lin Li">
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="section-light">
+    <div class="container">
+      <h2 class="section-title">Professional Experience</h2>
+      <p class="section-subtitle">Building innovative solutions across medical imaging and autonomous driving</p>
+      
+      <div class="experience-grid">
+        <!-- Alphatec Spine -->
+        <div class="experience-card">
+          <div class="experience-content">
+            <h3><a href="https://atecspine.com/">Alphatec Spine</a></h3>
+            <p>I led the redesign of the C-arm calibration process, reducing installation time by over 75% and increasing system pass rates by more than 60%. I also spearheaded the development of an intra-operative image alignment (IOA) system, playing a key role in its FDA 510(k) submission and alpha launch. My contributions have enabled faster, more reliable surgical workflows and improved clinical outcomes.</p>
+            <a href="experience/alphatec-experience.html" class="btn btn-primary">
+              Learn More <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+          <div class="experience-image logo" style="background-image: url('images/alphatec_logo.png');"></div>
+        </div>
+
+        <!-- TuSimple -->
+        <div class="experience-card reverse">
+          <div class="experience-content">
+            <h3>TuSimple</h3>
+            <p>I built and deployed deep learning models for 3D perception in autonomous vehicles. I developed large-scale data pipelines, monocular and stereo 3D estimation models, and real-time APIs, significantly improving depth estimation accuracy and automation in challenging environments.</p>
+            <a href="experience/tusimple-experience.html" class="btn btn-primary">
+              Learn More <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+          <div class="experience-image" style="background-image: url('images/Navistar-TuSimple.jpg');"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Publications Section -->
+  <section id="publications" class="section-dark">
+    <div class="container">
+      <h2 class="section-title">Publications</h2>
+      <p class="section-subtitle">Research contributions in applied mathematics and machine learning</p>
+      
+      <div class="publications-list">
+        <ul>
+          <li>
+            <a href="https://www.proquest.com/openview/8d91d4707009a8fe382debf64dd8dd1e/1?pq-origsite=gscholar&cbl=18750&diss=y">
+              Li, L., et al. "Improved Quasi-Monte Carlo Methods for Integrating High Dimension Functions", 2020.
+            </a>
+          </li>
+          <li>
+            <a href="https://link.springer.com/article/10.1007/s11075-025-02223-5">
+              Li, L., Hyman, J.M. Using radial basis functions for control variate integration of high-dimensional functions defined by sparse sample data. Numer Algor (2025).
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Presentations Section -->
+  <section id="presentations" class="section-light">
+    <div class="container">
+      <h2 class="section-title">Presentations</h2>
+      <p class="section-subtitle">Technical talks and research reviews</p>
+      
+      <div class="presentations-grid">
+        <div class="presentation-card">
+          <div class="presentation-icon">
+            <i class="fas fa-brain"></i>
+          </div>
+          <h3>
+            <a href="presentations/DeepSeek_related_tech_points.pdf">DeepSeek Introduction</a>
+          </h3>
+          <p>This presentation covers technique points in DeepSeek R1.</p>
+        </div>
+
+        <div class="presentation-card">
+          <div class="presentation-icon">
+            <i class="fas fa-camera"></i>
+          </div>
+          <h3>
+            <a href="presentations/EPro_PnP_Reading.pdf">EPro-PnP</a>
+          </h3>
+          <ul>
+            <li>Proposed a probabilistic PnP layer for general end-to-end pose estimation via learnable 2D-3D correspondences</li>
+            <li>EPro-PnP can easily reach top-tier performance for 6DoF pose estimation by simply inserting it into the CDPN framework</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="section-dark">
+    <div class="container">
+      <h2 class="section-title">Education</h2>
+      <p class="section-subtitle">Academic background and training</p>
+      
+      <div class="education-timeline">
+        <div class="education-item">
+          <strong>Ph.D. in Applied Mathematics</strong>
+          <a href="https://tulane.edu/">Tulane University</a>, New Orleans, LA<br>
+          Advisor: <a href="https://sse.tulane.edu/mac-hyman-phd">Dr. Mac Hyman</a>
+          <span class="education-date">2015 — 2020</span>
+        </div>
+
+        <div class="education-item">
+          <strong>B.Sc. in Applied Mathematics</strong>
+          <a href="https://en.xjtu.edu.cn/">Xi'an Jiaotong University</a>, Xi'an, China
+          <span class="education-date">2011 — 2015</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <ul class="social-links">
+      <li>
+        <a href="https://github.com/llwc" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/lin-li-610904114/" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://scholar.google.com/citations?user=fOwSWgkAAAAJ&hl=en" aria-label="Google Scholar">
+          <i class="fas fa-graduation-cap"></i>
+        </a>
+      </li>
+      <li>
+        <a href="mailto:lilinermiao@gmail.com" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    </ul>
+    <p>&copy; 2025 Lin Li. All rights reserved.</p>
+  </footer>
+
+</body>
 </html>
